@@ -49,20 +49,20 @@ plt.xlabel("Diferença de Média")
 plt.grid(True)
 plt.show()
 
-""" Hipótese nula (H₀): não há diferença de desempenho médio entre cursos de computação com diferentes composições raciais predominantes.
-
-Resultado: p ≪ 0,05 → rejeitamos H₀.
-
-✅ Conclusão: há diferenças significativas no desempenho médio (MEDIA_NT_CE) entre cursos cuja maioria dos alunos se autodeclara de diferentes grupos raciais.
 """
+ANOVA: 1.1347369708804156 0.3244043198769333
 
-"""
-A vs B (meandiff = -8.88, p=0.0102, reject=True):
-Cursos em que predomina o grupo A têm desempenho em média 8,9 pontos menor que os cursos em que predomina o grupo B → diferença significativa.
+Resultado do teste de Tukey:
+   Multiple Comparison of Means - Tukey HSD, FWER=0.05   
+=========================================================
+ group1   group2  meandiff p-adj   lower    upper  reject
+---------------------------------------------------------
+QE_I02_A QE_I02_B  -7.6174 0.6789 -29.0968 13.8621  False
+QE_I02_A QE_I02_D   3.3148 0.4538  -3.2157  9.8453  False
+QE_I02_B QE_I02_D  10.9321 0.4721 -11.1701 33.0343  False
+---------------------------------------------------------
 
-A vs D (meandiff = 3.10, p<0.001, reject=True):
-Cursos com predominância do grupo D têm notas ~3 pontos maiores que os do grupo A → diferença significativa.
+p = 0.324 (> 0.05) → não há evidência estatisticamente significativa de que a variável QE_I02 (raça/cor) esteja associada a diferenças nas notas CE, considerando os grupos analisados.
 
-B vs D (meandiff = 11.99, p<0.001, reject=True):
-Cursos do grupo D têm notas em média ~12 pontos maiores que os do grupo B → diferença significativa.
+Ou seja, as médias entre os grupos de QE_I02 parecem semelhantes.
 """

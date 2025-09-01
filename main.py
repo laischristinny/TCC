@@ -98,6 +98,8 @@ df_cursos_info = pd.read_csv(
 # Filtrar apenas cursos de computação
 df_cursos_info = df_cursos_info[df_cursos_info['CO_CURSO'].isin(cursos_computacao_ids)]
 
+df_cursos_info = df_cursos_info.drop_duplicates(subset='CO_CURSO')
+
 # Juntar informações (ex: IES e UF)
 df_final_agregado = df_final_agregado.reset_index().merge(
     df_cursos_info[['CO_CURSO', 'CO_IES', 'CO_MODALIDADE', 'CO_UF_CURSO', 'CO_MUNIC_CURSO', 'CO_CATEGAD', 'CO_REGIAO_CURSO']],

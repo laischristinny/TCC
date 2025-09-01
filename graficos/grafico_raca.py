@@ -74,7 +74,7 @@ else:
         plt.tight_layout()
 
         # --- Salvamento e Exibição ---
-        plt.savefig('grafico_correlacao_composicao_racial.png', dpi=300)
+        plt.savefig('imagens/grafico_correlacao_composicao_racial.png', dpi=300)
         print("\nGráfico 'grafico_correlacao_composicao_racial.png' salvo com sucesso.")
 
         print("\n--- Tabela: Correlação entre Nota Média e Composição Racial ---")

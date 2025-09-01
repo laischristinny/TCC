@@ -31,7 +31,7 @@ else:
         plt.tight_layout()
 
         # Salvar o gráfico
-        plt.savefig('grafico_dispersao_renda_desempenho.png', dpi=300)
+        plt.savefig('imagens/grafico_dispersao_renda_desempenho.png', dpi=300)
         print("Gráfico 'grafico_dispersao_renda_desempenho.png' salvo com sucesso.")
 
         # Calcular a correlação de Pearson

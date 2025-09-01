@@ -34,7 +34,7 @@ else:
     plt.tight_layout()
 
     # Salvar o gráfico
-    plt.savefig('grafico_media_nota_por_estado.png', dpi=300)
+    plt.savefig('imagens/grafico_media_nota_por_estado.png', dpi=300)
 
     print("Gráfico 'grafico_media_nota_por_estado.png' salvo com sucesso.")
     print("\nTabela: Média de Notas por Estado")

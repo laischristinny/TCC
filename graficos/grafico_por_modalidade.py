@@ -21,7 +21,7 @@ else:
     plt.tight_layout()
 
     # Salvar o gráfico
-    plt.savefig('grafico_boxplot_modalidade.png', dpi=300)
+    plt.savefig('imagens/grafico_boxplot_modalidade.png', dpi=300)
     print("Gráfico 'grafico_boxplot_modalidade.png' salvo com sucesso.")
 
     # Tabela de estatísticas descritivas

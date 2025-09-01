@@ -48,3 +48,19 @@ plt.title("Intervalos de Confiança - Teste de Tukey")
 plt.xlabel("Diferença de Média")
 plt.grid(True)
 plt.show()
+
+"""
+ANOVA: 2.8831054182614198 0.03801649512871627
+
+Resultado do teste de Tukey:
+   Multiple Comparison of Means - Tukey HSD, FWER=0.05   
+=========================================================
+ group1   group2  meandiff p-adj   lower    upper  reject
+---------------------------------------------------------
+QE_I13_A QE_I13_B   9.2586  0.057  -0.1878  18.705  False
+QE_I13_A QE_I13_F  -4.7119 0.9818 -37.3005 27.8767  False
+QE_I13_B QE_I13_C   3.9935 0.9748  -20.664 28.6509  False
+QE_I13_B QE_I13_F -13.9705 0.7034 -47.6589  19.718  False
+QE_I13_C QE_I13_F -17.9639 0.6438 -57.7228  21.795  False
+---------------------------------------------------------
+"""

@@ -23,7 +23,7 @@ else:
     corr_com_nota = corr_com_nota.drop('MEDIA_NT_CE')
 
     # Exportar a tabela de correlação para CSV
-    corr_com_nota.to_csv('tabela_correlacao.csv')
+    corr_com_nota.to_csv('tabelas/tabela_correlacao.csv')
     print("Tabela de correlação salva com sucesso em 'tabela_correlacao.csv'.")
 
 
@@ -42,5 +42,5 @@ else:
     plt.tight_layout() # Ajusta o layout para evitar que os rótulos se sobreponham
 
     # Salvar o gráfico
-    plt.savefig('grafico_barras_correlacao.png', dpi=300)
+    plt.savefig('imagens/grafico_barras_correlacao.png', dpi=300)
     print("Gráfico 'grafico_barras_correlacao.png' salvo com sucesso.")

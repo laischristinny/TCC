@@ -51,25 +51,28 @@ plt.xlabel("Diferença de Média")
 plt.grid(True)
 plt.show()
 
-""" Resultado: ANOVA: 454.0696239197707 0.0 
-454.06 → é o F-statistic (estatística de teste). 
-Ele mede a razão entre a variabilidade entre os grupos (diferença de médias entre faixas de renda) e a variabilidade dentro dos grupos (diferença entre cursos dentro da mesma faixa de renda). 
-Quanto maior esse valor, mais provável que exista uma diferença real entre as médias. 
-O teste ANOVA foi significativo, F(…)=454.07, p < 0.001. 
-Portanto, existe diferença estatisticamente significativa entre as médias de desempenho de cursos com diferentes perfis de renda. 
-"""
+""" 
+ANOVA: 13.28349755720695 1.3990391493501314e-10
 
-"""
-Tukey:
-a) QE_I08_A (faixa de renda mais baixa) vs outras:
-
-A vs B (3.54, p<0.001, True): cursos com predominância da faixa A têm, em média, notas 3,5 pontos menores que cursos com predominância da faixa B → diferença significativa.
-
-A vs C (0.93, p=0.803, False): praticamente não há diferença significativa entre A e C.
-
-A vs E (7.08, p<0.001, True): diferença grande → cursos com renda E (mais alta) têm notas ~7 pontos maiores que cursos de renda A.
-
-A vs F (18.06, p<0.001, True): cursos da faixa F (renda mais alta ainda) têm notas ~18 pontos maiores que cursos de renda A.
-
-📌 Isso mostra que quanto maior a renda predominante, maior a nota média dos cursos.
+Resultado do teste de Tukey:
+   Multiple Comparison of Means - Tukey HSD, FWER=0.05   
+=========================================================
+ group1   group2  meandiff p-adj   lower    upper  reject
+---------------------------------------------------------
+QE_I08_A QE_I08_B  14.7049    0.0   6.0513 23.3584   True
+QE_I08_A QE_I08_C  17.6188    0.0   9.1643 26.0734   True
+QE_I08_A QE_I08_D  12.3186   0.02   1.2332  23.404   True
+QE_I08_A QE_I08_E  21.6518    0.0  11.6595  31.644   True
+QE_I08_A QE_I08_F  28.1053    0.0  16.7489 39.4616   True
+QE_I08_B QE_I08_C    2.914 0.8191  -3.9065  9.7345  False
+QE_I08_B QE_I08_D  -2.3863  0.982  -12.282  7.5094  False
+QE_I08_B QE_I08_E   6.9469 0.1931  -1.7066 15.6004  False
+QE_I08_B QE_I08_F  13.4004 0.0029   3.2021 23.5987   True
+QE_I08_C QE_I08_D  -5.3003  0.616 -15.0225  4.4219  False
+QE_I08_C QE_I08_E   4.0329 0.7398  -4.4217 12.4875  False
+QE_I08_C QE_I08_F  10.4864 0.0348   0.4564 20.5164   True
+QE_I08_D QE_I08_E   9.3332 0.1522  -1.7522 20.4186  False
+QE_I08_D QE_I08_F  15.7867 0.0041   3.4576 28.1158   True
+QE_I08_E QE_I08_F   6.4535 0.5722  -4.9028 17.8098  False
+---------------------------------------------------------
 """
