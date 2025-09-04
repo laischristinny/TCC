@@ -12,10 +12,8 @@ from sklearn.linear_model import Ridge, Lasso
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
-# 1. Carregar base
 df = pd.read_csv("tabelas/enade_2023_computacao_agregado.csv", encoding="utf-8-sig")
 
-# 2. Definir target e features
 y = df["MEDIA_NT_CE"]
 X = df.drop(columns=[
     "MEDIA_NT_CE", 
@@ -23,12 +21,10 @@ X = df.drop(columns=[
     "CO_MUNIC_CURSO", "CO_CATEGAD", "CO_REGIAO_CURSO"
 ])
 
-# 3. Dividir treino e teste
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# 4. Regressão Ridge
 ridge = Ridge(alpha=10)  # alpha = intensidade da regularização
 ridge.fit(X_train, y_train)
 y_pred_ridge = ridge.predict(X_test)
@@ -41,7 +37,6 @@ coef_ridge = pd.Series(ridge.coef_, index=X.columns).sort_values(ascending=False
 print("\nCoeficientes Ridge (Top 15):")
 print(coef_ridge.head(15))
 
-# 5. Regressão Lasso
 lasso = Lasso(alpha=0.1)  # alpha controla o quanto zera coeficientes
 lasso.fit(X_train, y_train)
 y_pred_lasso = lasso.predict(X_test)

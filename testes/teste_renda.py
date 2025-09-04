@@ -14,13 +14,11 @@ Hipótese alternativa (H₁): pelo menos uma faixa de renda está associada
 a desempenho médio diferente.
 """
 
-# --- Carregar dados ---
 df_final = pd.read_csv('tabelas/enade_2023_computacao_agregado.csv')
 
 # Colunas das faixas de renda
 faixas_renda = ['QE_I08_A','QE_I08_B','QE_I08_C','QE_I08_D','QE_I08_E','QE_I08_F','QE_I08_G']
 
-# Criar uma coluna com a faixa de renda predominante em cada curso
 df_final['faixa_renda_predom'] = df_final[faixas_renda].idxmax(axis=1)
 
 # --- ANOVA ---
@@ -31,7 +29,6 @@ f_stat, p_val = stats.f_oneway(*grupos)
 print("ANOVA:", f_stat, p_val)
 
 # --- Teste Tukey ---
-# O Tukey precisa dos dados em formato longo: uma coluna de notas e uma de grupos
 tukey = pairwise_tukeyhsd(endog=df_final['MEDIA_NT_CE'],
                           groups=df_final['faixa_renda_predom'],
                           alpha=0.05)
@@ -39,11 +36,9 @@ tukey = pairwise_tukeyhsd(endog=df_final['MEDIA_NT_CE'],
 print("\nResultado do teste de Tukey:")
 print(tukey.summary())
 
-# Preparar os dados para o MultiComparison
 mc = MultiComparison(df_final['MEDIA_NT_CE'], df_final['faixa_renda_predom'])
 tukey_result = mc.tukeyhsd()
 
-# Gerar o gráfico
 fig, ax = plt.subplots(figsize=(8, 6))
 tukey_result.plot_simultaneous(ax=ax)
 plt.title("Intervalos de Confiança - Teste de Tukey")

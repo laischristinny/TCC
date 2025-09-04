@@ -4,10 +4,8 @@ import numpy as np
 
 print("--- Iniciando o pré-processamento e agregação dos dados ---")
 
-# Caminho da pasta onde estão os arquivos .txt
 DATA_DIR = 'dados'
 
-# 1. FILTRAGEM: Identificar os cursos de Computação
 CODIGO_GRUPO_COMPUTACAO = 6411
 
 path_arq1 = os.path.join(DATA_DIR, 'microdados2023_arq1.txt')
@@ -20,10 +18,8 @@ cursos_computacao_ids = df_cursos[df_cursos['CO_GRUPO'] == CODIGO_GRUPO_COMPUTAC
 print(f"Foram encontrados {len(cursos_computacao_ids)} cursos do grupo {CODIGO_GRUPO_COMPUTACAO}.")
 print(f"IDs dos cursos: {cursos_computacao_ids}\n")
 
-# 2. AGREGAÇÃO: Criar DataFrame final
 df_final_agregado = pd.DataFrame({'CO_CURSO': cursos_computacao_ids}).set_index('CO_CURSO')
 
-# 3. Processar DESEMPENHO
 print("Processando notas do componente específico (NT_CE)...")
 path_arq3 = os.path.join(DATA_DIR, 'microdados2023_arq3.txt')
 df_notas = pd.read_csv(
@@ -85,7 +81,6 @@ for filename, variavel in arquivos_categoricos.items():
     df_final_agregado = df_final_agregado.join(distribuicao_percentual)
     print(f"Distribuição percentual da variável '{variavel}' agregada.\n")
 
-# 5. RESULTADO FINAL
 print("--- Tabela final agregada por curso ---")
 df_final_agregado = df_final_agregado.fillna(0)
 

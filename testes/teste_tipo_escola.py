@@ -12,13 +12,10 @@ H₀: MEDIA_NT_CE não difere entre tipos de escola predominantes (privada, publ
 H₁: pelo menos um tipo difere.
 """
 
-# --- Carregar dados ---
 df_final = pd.read_csv('tabelas/enade_2023_computacao_agregado.csv')
 
-# Colunas das faixas de tipo de escola
 faixas_renda = ['QE_I17_A','QE_I17_B','QE_I17_C','QE_I17_D','QE_I17_E','QE_I17_F']
 
-# Criar uma coluna com a faixa de tipo predominante em cada curso
 df_final['faixa_tipo_escola_predom'] = df_final[faixas_renda].idxmax(axis=1)
 
 # --- ANOVA ---
@@ -29,7 +26,6 @@ f_stat, p_val = stats.f_oneway(*grupos)
 print("ANOVA:", f_stat, p_val)
 
 # --- Teste Tukey ---
-# O Tukey precisa dos dados em formato longo: uma coluna de notas e uma de grupos
 tukey = pairwise_tukeyhsd(endog=df_final['MEDIA_NT_CE'],
                           groups=df_final['faixa_tipo_escola_predom'],
                           alpha=0.05)
@@ -37,11 +33,9 @@ tukey = pairwise_tukeyhsd(endog=df_final['MEDIA_NT_CE'],
 print("\nResultado do teste de Tukey:")
 print(tukey.summary())
 
-# Preparar os dados para o MultiComparison
 mc = MultiComparison(df_final['MEDIA_NT_CE'], df_final['faixa_tipo_escola_predom'])
 tukey_result = mc.tukeyhsd()
 
-# Gerar o gráfico
 fig, ax = plt.subplots(figsize=(8, 6))
 tukey_result.plot_simultaneous(ax=ax)
 plt.title("Intervalos de Confiança - Teste de Tukey")
