@@ -65,8 +65,6 @@ else:
     plt.ylabel("Variável", fontsize=12)
     plt.tight_layout()
 
-    if not os.path.exists("graficos"):
-        os.makedirs("graficos")
-    plt.savefig("graficos/12_importancia_xgboost.png", dpi=300)
+    plt.savefig("imagens/12_importancia_xgboost.png", dpi=300)
     plt.close()
-    print("Gráfico salvo em 'graficos/12_importancia_xgboost.png'")
+    print("Gráfico salvo em 'imagens/12_importancia_xgboost.png'")
