@@ -44,3 +44,17 @@ plt.title("Importância das Variáveis - Random Forest")
 plt.ylabel("Importância")
 plt.tight_layout()
 plt.show()
+
+"""
+MSE: 31.827468584928244
+R²: 0.6483718491837729
+
+Variáveis mais importantes para prever a nota CE:
+QE_I13_B    0.186998
+QE_I25_E    0.091766
+QE_I17_B    0.091271
+QE_I09_E    0.086404
+QE_I04_D    0.061775
+QE_I21_A    0.044631
+QE_I15_A    0.038376
+"""

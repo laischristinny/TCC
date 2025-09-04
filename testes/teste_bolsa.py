@@ -59,4 +59,11 @@ QE_I13_B QE_I13_C   3.9935 0.9748  -20.664 28.6509  False
 QE_I13_B QE_I13_F -13.9705 0.7034 -47.6589  19.718  False
 QE_I13_C QE_I13_F -17.9639 0.6438 -57.7228  21.795  False
 ---------------------------------------------------------
+2.8831... → é o valor da estatística F (quanto maior, mais evidência contra H₀).
+
+0.0380... → é o p-valor (probabilidade de observarmos esses dados se a hipótese nula fosse verdadeira).
+
+Se p ≤ 0.05 → rejeitamos H₀ → existe diferença significativa entre os grupos.
+
+Se p > 0.05 → não rejeitamos H₀ → não há evidência de diferença.
 """

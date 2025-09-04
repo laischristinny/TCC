@@ -60,3 +60,25 @@ plt.ylabel("Importância média (± desvio-padrão)")
 plt.xticks(rotation=90)
 plt.tight_layout()
 plt.show()
+
+"""
+Resultados Validação Cruzada (5 folds):
+R² médio: 0.724683368475256
+R² por fold: [0.6418484580187995, 0.8399129503979381, 0.6646674901610543, 0.7486726710565481, 0.7283152727419406]
+MSE médio: 40.81669226992305
+MSE por fold: [32.417930488756014, 29.27599880202273, 41.44093015062865, 42.96699093766261, 57.98161097054524]
+
+Top 20 variáveis mais importantes (média nos folds):
+     Variável  Importância Média  Desvio-Padrão
+75   QE_I13_B           0.161659       0.045128
+130  QE_I25_E           0.102091       0.057284
+114  QE_I21_A           0.060338       0.028173
+23   QE_I04_D           0.052443       0.025950
+15   QE_I17_B           0.049073       0.030719
+123  QE_I23_C           0.044283       0.024984
+122  QE_I23_B           0.044057       0.048571
+80   QE_I15_A           0.037665       0.017651
+74   QE_I13_A           0.034488       0.019550
+50   QE_I09_E           0.029983       0.030216
+12   QE_I08_F           0.027577       0.008659
+"""

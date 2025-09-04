@@ -58,3 +58,29 @@ plt.title("Comparação dos coeficientes - Ridge vs Lasso")
 plt.ylabel("Peso")
 plt.tight_layout()
 plt.show()
+
+"""
+=== Ridge Regression ===
+MSE: 16.136261418303295
+R²: 0.8217274569460388
+
+Coeficientes Ridge (Top 15):
+QE_I11_A    6.585987
+QE_I17_B    5.558943
+QE_I02_A    4.623329
+
+=== Lasso Regression ===
+MSE: 17.462101376749754
+R²: 0.8070796488232288
+
+Coeficientes Lasso (Top 15):
+QE_I17_B       19.412767
+QE_I08_F       12.807348
+QE_I17_A        9.729872
+QE_I13_B        8.899067
+QE_I12_A        8.447504
+QE_I02_A        8.043547
+QE_I11_A        7.849490
+QE_I09_E        7.576667
+QE_I07_A        5.618245
+"""

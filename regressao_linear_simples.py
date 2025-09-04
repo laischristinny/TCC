@@ -39,6 +39,18 @@ plt.title("Regressão Linear - Notas Reais vs Preditas")
 plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')
 plt.show()
 
+
+"""
+MSE: 758.4593261084323
+R²: -7.379417596381584
+
+Coeficientes das variáveis:
+QE_I09_A       116.207562
+QE_I17_F        89.809738
+QE_I16_14.0     88.436698
+QE_I15_B        86.693571
+"""
 """
 A regressão linear simples, quando aplicada a bases de dados que possuem elevado número de variáveis explicativas, especialmente variáveis categóricas transformadas em indicadores (dummies), tende a apresentar problemas de multicolinearidade e sobreajuste (overfitting). Tais problemas resultam em coeficientes instáveis e baixo poder preditivo, como evidenciado nos testes iniciais, em que o modelo apresentou coeficiente de determinação negativo (R² < 0), indicando pior desempenho do que a simples média das notas.
 """
+
