@@ -1,6 +1,6 @@
 # Análise de Desempenho ENADE 2023 - Cursos de Engenharia
 
-> Este projeto realiza o pré-processamento, análise estatística e modelagem preditiva dos dados do ENADE 2023 para cursos de Computação. O objetivo é investigar fatores socioeconômicos, raciais e acadêmicos associados ao desempenho dos cursos, utilizando técnicas de agregação, visualização e machine learning.
+> Este projeto realiza o pré-processamento, análise estatística e modelagem preditiva dos dados do ENADE 2023 para cursos de Engenharia. O objetivo é investigar fatores socioeconômicos, raciais e acadêmicos associados ao desempenho dos cursos, utilizando técnicas de agregação, visualização e machine learning.
 
 ## 📂 Estrutura de Pastas
 
