@@ -11,7 +11,7 @@ y = df["MEDIA_NT_CE"]
 X = df.drop(columns=[
     "MEDIA_NT_CE",  
     "CO_IES", "CO_MODALIDADE", "CO_UF_CURSO", "CO_MUNIC_CURSO",
-    "CO_CATEGAD", "CO_REGIAO_CURSO"
+    "CO_CATEGAD", "CO_REGIAO_CURSO", "CO_CURSO"
 ])
 
 rf = RandomForestRegressor(n_estimators=500, random_state=42, n_jobs=-1)

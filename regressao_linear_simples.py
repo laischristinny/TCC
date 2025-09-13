@@ -41,14 +41,15 @@ plt.show()
 
 
 """
-MSE: 758.4593261084323
-R²: -7.379417596381584
+MSE: 57.13780664315817
+R²: 0.6090006069110576
 
 Coeficientes das variáveis:
-QE_I09_A       116.207562
-QE_I17_F        89.809738
-QE_I16_14.0     88.436698
-QE_I15_B        86.693571
+QE_I17_F    19.476634
+QE_I17_C    15.984207
+QE_I06_E    14.120501
+QE_I07_A    10.255554
+QE_I08_F    10.101124
 """
 """
 A regressão linear simples, quando aplicada a bases de dados que possuem elevado número de variáveis explicativas, especialmente variáveis categóricas transformadas em indicadores (dummies), tende a apresentar problemas de multicolinearidade e sobreajuste (overfitting). Tais problemas resultam em coeficientes instáveis e baixo poder preditivo, como evidenciado nos testes iniciais, em que o modelo apresentou coeficiente de determinação negativo (R² < 0), indicando pior desempenho do que a simples média das notas.

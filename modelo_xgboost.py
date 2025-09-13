@@ -18,7 +18,11 @@ else:
     # Variável alvo
     y = df['MEDIA_NT_CE']
     # Features (remover identificadores e a própria target)
-    X = df.select_dtypes(include=np.number).drop(columns=['CO_CURSO', 'MEDIA_NT_CE'])
+    X = df.select_dtypes(include=np.number).drop(columns=[
+    "MEDIA_NT_CE",  
+    "CO_IES", "CO_MODALIDADE", "CO_UF_CURSO", "CO_MUNIC_CURSO",
+    "CO_CATEGAD", "CO_REGIAO_CURSO", "CO_CURSO"
+])
 
     # --- 2. Divisão treino/teste ---
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -68,3 +72,22 @@ else:
     plt.savefig("imagens/12_importancia_xgboost.png", dpi=300)
     plt.close()
     print("Gráfico salvo em 'imagens/12_importancia_xgboost.png'")
+
+"""
+--- Performance do XGBoost ---
+MSE: 53.94
+R²: 0.63
+
+--- Variáveis mais importantes segundo o XGBoost ---
+         Feature  Importance
+90      QE_I21_A    0.147202
+57      QE_I13_B    0.123868
+59      QE_I13_D    0.088652
+32      QE_I06_B    0.052399
+13      QE_I17_A    0.028040
+55      QE_I10_E    0.025688
+34      QE_I06_D    0.020380
+58      QE_I13_C    0.019606
+14      QE_I17_B    0.016142
+24      QE_I04_F    0.014336
+"""
