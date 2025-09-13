@@ -1,4 +1,4 @@
-# Análise de Desempenho ENADE 2023 - Cursos de Computação
+# Análise de Desempenho ENADE 2023 - Cursos de Engenharia
 
 > Este projeto realiza o pré-processamento, análise estatística e modelagem preditiva dos dados do ENADE 2023 para cursos de Computação. O objetivo é investigar fatores socioeconômicos, raciais e acadêmicos associados ao desempenho dos cursos, utilizando técnicas de agregação, visualização e machine learning.
 
@@ -24,7 +24,7 @@
 
 ### 1\. Pré-processamento dos Dados
 
-Execute `main.py` para gerar a tabela agregada principal (`enade_2023_computacao_agregado.csv`) na pasta `tabelas/`.
+Execute `main.py` para gerar a tabela agregada principal (`enade_2023_engenharia_agregado.csv`) na pasta `tabelas/`.
 
 ```bash
 python main.py

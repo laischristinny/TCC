@@ -101,7 +101,7 @@ df_final_agregado = df_final_agregado.reset_index().merge(
 ).set_index('CO_CURSO')
 
 # Salvar
-df_final_agregado.to_csv('tabelas/enade_2023_computacao_agregado.csv', encoding='utf-8-sig')
+df_final_agregado.to_csv('tabelas/enade_2023_engenharias_agregado.csv', encoding='utf-8-sig')
 print("Arquivo 'enade_2023_engenharias_agregado_nt_ce.csv' salvo com sucesso.")
 print("\nVisualização do DataFrame final:")
 print(df_final_agregado.head())
